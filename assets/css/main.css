@@ -1,0 +1,17 @@
+.main {
+    padding: 10rem 0;
+}
+
+.image-small {
+    width: 10rem;
+    height: auto;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.debug {
+    border: solid 1px red;
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Задание №5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <header>
+        {% block menu %}
+        {% endblock %}
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+    {% if error %}
+        <div class="error container">{{ error }}</div>
+    {% endif %}
+    {% if debug %}
+        <div class="debug container">Debug:<pre>{{ dump() }}</pre></div>
+    {% endif %}
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

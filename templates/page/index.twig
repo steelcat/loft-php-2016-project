@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block menu %}
+    {% include 'menu.twig' %}
+{% endblock %}
+{% block content %}
+    <div class="col-xs-6">
+        <a class="btn btn-primary" href="/user/login">Войти</a>
+    </div>
+    <div class="col-xs-6">
+        <a class="btn btn-primary" href="/user/register">Регистрация</a>
+    </div>
+{% endblock %}
