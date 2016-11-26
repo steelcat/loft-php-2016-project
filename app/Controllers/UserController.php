@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\App;
 use App\Mail;
+use App\Models\UserEloquentModel;
 use App\Post;
 use App\File;
 use App\Controller;
@@ -61,15 +62,15 @@ class UserController extends Controller
 
     public function actionFiles()
     {
-        $userModel = new UserModel('localhost', 'project');
-        $userFiles = $userModel->userFiles(Session::get('id'));
+        $userModel = new UserEloquentModel();
+        $userFiles = $userModel::all()->find(Session::get('id'))->image;
         View::show('user/files', ['userFiles' => $userFiles]);
     }
 
     public function actionAllusers()
     {
-        $userModel = new UserModel('localhost', 'project');
-        $users = $userModel->allUsers();
+        $userModel = new UserEloquentModel();
+        $users = $userModel::allUsers()->sortBy('age');
         for ($i=0; $i<count($users); $i++) {
             if (!isset($users[$i]['age'])) {
                 $users[$i]['adult'] = "Возраст не указан";

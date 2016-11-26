@@ -17,6 +17,7 @@
         "twig/twig": "^1.28",
         "phpmailer/phpmailer": "^5.2",
         "google/recaptcha": "^1.1",
-        "pimple/pimple": "^3.0"
+        "pimple/pimple": "^3.0",
+        "illuminate/database": "^5.2"
     }
 }

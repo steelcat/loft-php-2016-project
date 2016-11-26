@@ -22,4 +22,13 @@ define('APP_DEBUG', true);
 define('APP_CACHE', false);
 
 // Устанавливаем параметры подключения к базе данных
-const APP_DB = ['db_name' => 'project', 'db_user' => 'root', 'db_password' => ''];
+const APP_DB = [
+    'driver' => 'mysql',
+    'host' => 'localhost',
+    'database' => 'project',
+    'username' => 'root',
+    'password' => '',
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => '',
+];
