@@ -1,6 +1,6 @@
 <?php
 namespace App;
-
+// здесь желательно написать интерфейс так как PHPMailer может поменять на что нибудь еще
 class Mail
 {
     public static function send()
